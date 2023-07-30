@@ -1,0 +1,139 @@
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO
+$ git clone https://github.com/Rameez0216j/DevOps4245.git
+Cloning into 'DevOps4245'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO
+$ cd DevOps4245
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Assignments/
+        Quizzes/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git add .
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Assignments/Assignment 1.docx
+        new file:   Quizzes/Quiz 1.docx
+
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git commit -m "Created the directory structure"
+[main 4065eed] Created the directory structure
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Assignments/Assignment 1.docx
+ create mode 100644 Quizzes/Quiz 1.docx
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 441 bytes | 441.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Rameez0216j/DevOps4245.git
+   8bf5ce6..4065eed  main -> main
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git branch test
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git branch
+* main
+  test
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git checkout test
+Switched to branch 'test'
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (test)
+$ git branch
+  main
+* test
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (test)
+$ git status
+On branch test
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        instructions.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (test)
+$ git add .
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (test)
+$ git commit -m "Created an instructions text file"
+[test 17fbf15] Created an instructions text file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 instructions.txt
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (test)
+$ git status
+On branch test
+nothing to commit, working tree clean
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (test)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git branch
+* main
+  test
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git merge test
+Updating 4065eed..17fbf15
+Fast-forward
+ instructions.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 instructions.txt
+
+ramee@Rameez MINGW64 /d/Academics/SEM-7/CLASS DEVOPS/GIT INTEGRATED REPO/DevOps4245 (main)
+$ git log
+commit 17fbf15a3b36e28d5a8aacc0ebbbd1987c9ef7bd (HEAD -> main, test)
+Author: Rameez Ahmad <rameezahmad20131a4245@gmail.com>
+Date:   Sun Jul 30 08:17:49 2023 +0530
+
+    Created an instructions text file
+
+commit 4065eed58cbd8e23d2613b772bd3f6b694716b70 (origin/main, origin/HEAD)
+Author: Rameez Ahmad <rameezahmad20131a4245@gmail.com>
+Date:   Sun Jul 30 08:14:34 2023 +0530
+
+    Created the directory structure
+
+commit 8bf5ce68e5a159beeab45fe453ed5d1c74536cb5
+Author: Code_Buzz@learn <89456429+Rameez0216j@users.noreply.github.com>
+Date:   Sun Jul 30 08:04:02 2023 +0530
+
+    Initial commit
